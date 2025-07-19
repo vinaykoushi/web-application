@@ -45,7 +45,7 @@ pipeline{
         }
          stage('Pushing image to repository'){
             steps{
-                sh 'docker push vinaykoushi7/project-1'
+                sh 'docker push vinnu17/project-1'
             }
         }
         
