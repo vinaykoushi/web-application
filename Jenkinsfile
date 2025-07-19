@@ -24,13 +24,13 @@ pipeline{
         }
         stage('Build and tag'){
             steps{
-                sh 'docker build -t vinaykoushi/project-2 .'
+                sh 'docker build -t vinaykoushi/punith-web .'
             }
         }
         stage('Containerisation'){
             steps{
                 sh '''
-                docker run -it -d --name clast -p 9009:8080 vinaykoushi/project-2
+                docker run -it -d --name powerstar -p 9017:8080 vinaykoushi/punith-web
                 '''
             }
         }
@@ -45,7 +45,7 @@ pipeline{
         }
          stage('Pushing image to repository'){
             steps{
-                sh 'docker push vinnu17/project-2'
+                sh 'docker push vinnu17/punith-web'
             }
         }
         
