@@ -24,13 +24,13 @@ pipeline{
         }
         stage('Build and tag'){
             steps{
-                sh 'docker build -t vinaykoushi/project-1 .'
+                sh 'docker build -t vinaykoushi/project-2 .'
             }
         }
         stage('Containerisation'){
             steps{
                 sh '''
-                docker run -it -d --name c007 -p 9007:8080 vinaykoushi/project-1
+                docker run -it -d --name clast -p 9009:8080 vinaykoushi/project-2
                 '''
             }
         }
@@ -45,7 +45,7 @@ pipeline{
         }
          stage('Pushing image to repository'){
             steps{
-                sh 'docker push vinnu17/project-1'
+                sh 'docker push vinnu17/project-2'
             }
         }
         
