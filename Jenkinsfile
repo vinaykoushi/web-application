@@ -24,13 +24,13 @@ pipeline{
         }
         stage('Build and tag'){
             steps{
-                sh 'docker build -t vinaykoushi/webpagepunith .'
+                sh 'docker build -t vinnu17/kannadapunith .'
             }
         }
         stage('Containerisation'){
             steps{
                 sh '''
-                docker run -it -d --name powerstar -p 9011:8080 vinaykoushi/webpagepunith
+                docker run -it -d --name sandalwood -p 9017:8080 vinnu17/kannadapunith
                 '''
             }
         }
@@ -45,7 +45,7 @@ pipeline{
         }
          stage('Pushing image to repository'){
             steps{
-                sh 'docker push vinnu17/webpagepunith'
+                sh 'docker push vinnu17/kannadapunith'
             }
         }
         
