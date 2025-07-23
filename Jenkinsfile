@@ -30,7 +30,7 @@ pipeline{
         stage('Containerisation'){
             steps{
                 sh '''
-                docker run -it -d --name star -p 9011:8080 vinaykoushi/punith-webpage
+                docker run -it -d --name star -p 9007:8080 vinaykoushi/punith-webpage
                 '''
             }
         }
