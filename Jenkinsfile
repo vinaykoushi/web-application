@@ -45,7 +45,7 @@ pipeline{
         }
          stage('Pushing image to repository'){
             steps{
-                sh 'docker push vinaykoushi/punith-webpage'
+                sh 'docker push vinnu17/punith-webpage'
             }
         }
         
